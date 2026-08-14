@@ -1,5 +1,5 @@
 {
-  "name": "@local/dsh-client-ui-slingshot",
+  "name": "@t7kai/dsh-client-ui-slingshot",
   "version": "0.1.0",
   "description": "A playful slingshot toy for the dsh web GUI: drag to aim, fire a stone, shatter UI elements and watch them tumble off screen — then pop back, good as new.",
   "type": "module",

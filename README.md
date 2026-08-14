@@ -35,7 +35,7 @@ Extra features:
 DSH 0811 起不再有官方 repository 插件机制，客户端插件统一挂进 web profile：
 
 1. 把本包放进 profile 的模块解析路径（二选一）：
-   - 直接把 `dsh-client-ui-slingshot` 目录复制/软链到 `~/.dsh/profiles/node_modules/@local/` 下，或
+   - 直接把 `dsh-client-ui-slingshot` 目录复制/软链到 `~/.dsh/profiles/node_modules/@t7kai/` 下，或
    - 用 [plugin-registry](https://github.com/vlln/plugin-registry) 控制台 git 源安装：
      `dsh plugin --profile web add "github:<你的账号>/dsh-client-ui-slingshot#main"`
 2. 在 `~/.dsh/profiles/web/cordis.patch.yml` 注册一行（配置层 HMR 热生效，无需重启）：
@@ -43,7 +43,7 @@ DSH 0811 起不再有官方 repository 插件机制，客户端插件统一挂�
    ```yaml
    - insert:
        - id: ui-slingshot
-         name: '@local/dsh-client-ui-slingshot'
+         name: '@t7kai/dsh-client-ui-slingshot'
    ```
 
 3. 刷新浏览器页面，右下角出现弹弓 🪀（点击 ✕ 可收起；位置、声音、得分自动记忆）。
@@ -70,9 +70,9 @@ DSH 0811 起不再有官方 repository 插件机制，客户端插件统一挂�
 
 - The package lives in the session workspace and is linked into the profile's
   module resolution:
-  `~/.dsh/profiles/node_modules/@local/dsh-client-ui-slingshot → <workspace>/dsh-client-ui-slingshot`
+  `~/.dsh/profiles/node_modules/@t7kai/dsh-client-ui-slingshot → <workspace>/dsh-client-ui-slingshot`
 - `~/.dsh/profiles/web/cordis.patch.yml` registers the loader row
-  `ui-slingshot` (`@local/dsh-client-ui-slingshot`); the profile patch layer
+  `ui-slingshot` (`@t7kai/dsh-client-ui-slingshot`); the profile patch layer
   is hot-reloaded by the running server, so the row and its bundle are served
   without a restart (a one-time page refresh picks the new plugin up).
 
@@ -80,5 +80,5 @@ DSH 0811 起不再有官方 repository 插件机制，客户端插件统一挂�
 
 Delete the `ui-slingshot` row from `~/.dsh/profiles/web/cordis.patch.yml` and
 remove the symlink
-`~/.dsh/profiles/node_modules/@local/dsh-client-ui-slingshot`. A page refresh
+`~/.dsh/profiles/node_modules/@t7kai/dsh-client-ui-slingshot`. A page refresh
 unloads it.
