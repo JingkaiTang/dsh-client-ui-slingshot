@@ -1,5 +1,7 @@
 # 弹弓玩具 · dsh slingshot toy 🪀
 
+![弹弓玩具演示](assets/slingshot-demo.gif)
+
 A playful, purely-visual toy for the dsh web GUI. A wooden slingshot lives in
 the bottom-right corner of the page (drag it anywhere!):
 
