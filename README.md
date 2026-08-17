@@ -63,7 +63,7 @@ DSH 0811 起不再有官方 repository 插件机制，客户端插件统一挂�
 
 | File | Purpose |
 | --- | --- |
-| `package.json` | Package manifest: `dsh.client.platform = "web"` declaration + `./client` export (the dsh client-modules contract) |
+| `package.json` | Package manifest: `dsh.client.platform = "web"` + `dsh.bundle.client = "./lib/client.js"` declarations + `./client` export (the dsh client-modules contract) |
 | `lib/index.js` | Host-side no-op plugin (the loader row needs a valid host entry; the toy is browser-only) |
 | `lib/client.js` | The whole toy — vanilla DOM, no dependencies, ModuleLoader bundle format |
 | `README.md` | This file |

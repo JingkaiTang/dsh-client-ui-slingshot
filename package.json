@@ -12,6 +12,9 @@
   "dsh": {
     "client": {
       "platform": "web"
+    },
+    "bundle": {
+      "client": "./lib/client.js"
     }
   },
   "files": [
